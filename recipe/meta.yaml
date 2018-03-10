@@ -32,6 +32,11 @@ requirements:
     - r-multicool
     - r-mvtnorm >=1.0_0
     - r-rgl >=0.66
+    - r-kernlab
+    - r-matrix
+    - r-mclust
+    - r-mgcv
+    - r-oceanview
     - posix                # [win]
     - {{native}}toolchain  # [win]
     - gcc                  # [not win]
@@ -45,6 +50,11 @@ requirements:
     - r-mvtnorm >=1.0_0
     - r-rgl >=0.66
     - libgcc  # [not win]
+    - r-kernlab
+    - r-matrix
+    - r-mclust
+    - r-mgcv
+    - r-oceanview
 
 test:
   commands:
@@ -65,3 +75,4 @@ extra:
     - johanneskoester
     - bgruening
     - daler
+    - jdblischak
