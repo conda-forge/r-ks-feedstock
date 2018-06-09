@@ -1,4 +1,4 @@
-{% set version = '1.10.7' %}
+{% set version = "1.11.2" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/ks_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/ks/ks_{{ version }}.tar.gz
-  sha256: a505c65e1fd59b7e5e61d0955f1a66b0f568198e97a71f356245565bf6a74507
+  sha256: 9dfd485096e1e67abc7dfcb7b76a83de110dd15bcfeffe5c899605b3a5592961
 
 build:
   number: 0
