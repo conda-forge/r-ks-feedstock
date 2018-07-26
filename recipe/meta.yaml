@@ -1,4 +1,4 @@
-{% set version = '1.10.7' %}
+{% set version = "1.11.3" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/ks_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/ks/ks_{{ version }}.tar.gz
-  sha256: a505c65e1fd59b7e5e61d0955f1a66b0f568198e97a71f356245565bf6a74507
+  sha256: 0d69e85fb4dc97045fdc273b36cf44b185ab60a6d7b17e1eb0c6dddf074be47c
 
 build:
   number: 0
@@ -32,6 +32,8 @@ requirements:
     - r-multicool
     - r-mvtnorm >=1.0_0
     - r-rgl >=0.66
+    - r-kernlab
+    - r-mclust
     - posix                # [win]
     - {{native}}toolchain  # [win]
     - gcc                  # [not win]
@@ -44,6 +46,8 @@ requirements:
     - r-multicool
     - r-mvtnorm >=1.0_0
     - r-rgl >=0.66
+    - r-kernlab
+    - r-mclust
     - libgcc  # [not win]
 
 test:
