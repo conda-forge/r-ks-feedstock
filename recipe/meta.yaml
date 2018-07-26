@@ -32,6 +32,8 @@ requirements:
     - r-multicool
     - r-mvtnorm >=1.0_0
     - r-rgl >=0.66
+    - r-kernlab
+    - r-mclust
     - posix                # [win]
     - {{native}}toolchain  # [win]
     - gcc                  # [not win]
@@ -44,6 +46,8 @@ requirements:
     - r-multicool
     - r-mvtnorm >=1.0_0
     - r-rgl >=0.66
+    - r-kernlab
+    - r-mclust
     - libgcc  # [not win]
 
 test:
