@@ -15,7 +15,8 @@ source:
   sha256: 0d69e85fb4dc97045fdc273b36cf44b185ab60a6d7b17e1eb0c6dddf074be47c
 
 build:
-  number: 0
+  merge_build_host: True  # [win]
+  number: 1
   # r-rgl is not available on win and osx
   skip: true  # [win or osx]
 
@@ -25,6 +26,10 @@ build:
 
 requirements:
   build:
+    - posix                # [win]
+    - {{ compiler('c') }}        # [unix]
+    - {{ compiler('m2w64_c') }}  # [win]
+  host:
     - r-base
     - r-fnn >=1.1
     - r-kernsmooth >=2.22
@@ -34,9 +39,6 @@ requirements:
     - r-rgl >=0.66
     - r-kernlab
     - r-mclust
-    - posix                # [win]
-    - {{native}}toolchain  # [win]
-    - gcc                  # [not win]
 
   run:
     - r-base
@@ -48,7 +50,6 @@ requirements:
     - r-rgl >=0.66
     - r-kernlab
     - r-mclust
-    - libgcc  # [not win]
 
 test:
   commands:
