@@ -38,6 +38,7 @@ requirements:
     - r-mgcv
     - r-multicool
     - r-mvtnorm >=1.0_0
+    - r-plot3d
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
@@ -49,6 +50,7 @@ requirements:
     - r-mgcv
     - r-multicool
     - r-mvtnorm >=1.0_0
+    - r-plot3d
 
 test:
   commands:
@@ -57,10 +59,11 @@ test:
 
 about:
   home: http://www.mvstat.net/mvksa
-  license: GPL-2 | GPL-3
+  license: GPL-2.0-or-later
   summary: 'Kernel smoothers for univariate and multivariate data, including densities, density derivatives, cumulative distributions, clustering, classification, density ridges, significant modal regions, and two-sample hypothesis tests. Chacon & Duong (2018) <doi:10.1201/9780429485572>.   '
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
