@@ -28,6 +28,7 @@ requirements:
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-fnn >=1.1
@@ -39,6 +40,7 @@ requirements:
     - r-multicool
     - r-mvtnorm >=1.0_0
     - r-plot3d
+    - r-pracma
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
@@ -51,6 +53,7 @@ requirements:
     - r-multicool
     - r-mvtnorm >=1.0_0
     - r-plot3d
+    - r-pracma
 
 test:
   commands:
