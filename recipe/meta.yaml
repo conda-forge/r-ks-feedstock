@@ -1,4 +1,4 @@
-{% set version = "1.13.2" %}
+{% set version = "1.13.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ks_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ks/ks_{{ version }}.tar.gz
-  sha256: 7c9e4e178adcecb0817213c0210b82d91647f4acf5c4d4056d46d286a5bff609
+  sha256: defb80df665d987f1751899f7a9809cb5a770f3c74266d7fbc7b9493616dce73
 
 build:
   merge_build_host: true  # [win]
