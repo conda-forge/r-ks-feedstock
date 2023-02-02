@@ -21,6 +21,17 @@ build:
 
 requirements:
   build:
+    - cross-r-base {{ r_base }}  # [build_platform != target_platform]
+    - r-matrix                   # [build_platform != target_platform]
+    - r-mvtnorm                  # [build_platform != target_platform]
+    - r-pracma                   # [build_platform != target_platform]
+    - r-kernsmooth               # [build_platform != target_platform]
+    - r-mclust                   # [build_platform != target_platform]
+    - r-kernlab                  # [build_platform != target_platform]
+    - r-plot3d                   # [build_platform != target_platform]
+    - r-fnn                      # [build_platform != target_platform]
+    - r-multicool                # [build_platform != target_platform]
+    - r-mgcv                     # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
     - {{ posix }}filesystem        # [win]
