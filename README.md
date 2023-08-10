@@ -3,6 +3,7 @@ About r-ks-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-ks-feedstock/blob/main/LICENSE.txt)
 
+
 About r-ks
 ----------
 
@@ -11,6 +12,7 @@ Home: http://www.mvstat.net/mvksa
 Package license: GPL-2.0-or-later
 
 Summary: Kernel smoothers for univariate and multivariate data, including densities, density derivatives, cumulative distributions, clustering, classification, density ridges, significant modal regions, and two-sample hypothesis tests. Chacon & Duong (2018) <doi:10.1201/9780429485572>.   
+
 About r-ks
 ----------
 
