@@ -1,6 +1,5 @@
 {% set version = "1.14.2" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-ks
@@ -13,8 +12,7 @@ source:
   sha256: f19130476cfafec26bba102b66ecbaeb80a9312c62d55eeec54d1aec75803fcb
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -33,7 +31,9 @@ requirements:
     - r-multicool                # [build_platform != target_platform]
     - r-mgcv                     # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
@@ -54,7 +54,6 @@ requirements:
     - r-pracma
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-fnn >=1.1
     - r-kernsmooth >=2.22
     - r-matrix
