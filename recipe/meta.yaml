@@ -1,4 +1,4 @@
-{% set version = "1.15.0" %}
+{% set version = "1.15.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ks_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ks/ks_{{ version }}.tar.gz
-  sha256: da5ba3b24015071563c51a82a6e322631f2ce0112f5a3103d40f65e7e487a1f2
+  sha256: 7bd7f4f5ba42e8c6414920e58409bcf636709a91caa18bef0aadd6ac31835e73
 
 build:
   number: 0
